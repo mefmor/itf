@@ -1,5 +1,3 @@
-<!-- tag::all[] -->
-<!-- tag::head[] -->
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
@@ -9,11 +7,11 @@
 
 <body>
 <h1>Design your WS mock!</h1>
-<img th:src="@{/images/TacoCloud.png}"/>
+<img th:src="@{/images/InTestWeTrust.png}"/>
 
 <form method="POST" th:object="${design}">
     <div>
-        <h3>Name your taco creation:</h3>
+        <h3>Name your mock creation:</h3>
         <input type="text" th:field="*{name}"/>
         <span th:text="${#fields.hasErrors('name')}">XXX</span>
         <span class="validationError"
@@ -21,7 +19,7 @@
               th:errors="*{name}">Name Error</span>
         <br/>
 
-        <button>Submit your taco</button>
+        <button>Submit your mock</button>
     </div>
 </form>
 </body>
