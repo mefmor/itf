@@ -1,0 +1,28 @@
+<!-- tag::all[] -->
+<!-- tag::head[] -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Integration Testing Framework</title>
+</head>
+
+<body>
+<h1>Design your WS mock!</h1>
+<img th:src="@{/images/TacoCloud.png}"/>
+
+<form method="POST" th:object="${design}">
+    <div>
+        <h3>Name your taco creation:</h3>
+        <input type="text" th:field="*{name}"/>
+        <span th:text="${#fields.hasErrors('name')}">XXX</span>
+        <span class="validationError"
+              th:if="${#fields.hasErrors('name')}"
+              th:errors="*{name}">Name Error</span>
+        <br/>
+
+        <button>Submit your taco</button>
+    </div>
+</form>
+</body>
+</html>

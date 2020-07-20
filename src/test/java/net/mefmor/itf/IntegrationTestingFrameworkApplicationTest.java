@@ -1,12 +1,14 @@
 package net.mefmor.itf;
 
-import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-class IntegrationTestingFrameworkApplicationTest {
+
+@SpringBootTest
+public class IntegrationTestingFrameworkApplicationTest {
     @Test
-    void contextLoads() {
+    public void contextLoads() {
 
     }
 
